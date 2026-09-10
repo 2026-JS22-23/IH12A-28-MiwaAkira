@@ -1,14 +1,45 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>my-todo</title>
-  </head>
+
   <body>
-    
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
+    <div id="map"></div>
+    <script>
+      function initMap() {
+        // マップ
+        const map = new google.maps.Map(document.getElementById("map"), {
+          zoom: 18,
+          center: { lat: 35.16813518311986, lng: 136.88568875773115 },
+          zoomControl: true,
+          mapTypeControl: true,
+          streetViewControl: false
+        });
+
+        // マーカー
+        const marker = new google.maps.Marker({
+          position: { lat: 35.16813518311986, lng: 136.88568875773115 },
+          map: map,
+          title: "HALなごやだよ"
+        });
+
+        // 情報ウィンドウ（クリックで開く）
+        const infoWindow = new google.maps.InfoWindow({
+          content: "<h1>HALなごや</h1><p>ここはHALなごやです。</p>"
+        });
+        // マーカークリック時に情報ウィンドウを開く
+        marker.addListener("click", () => {
+          infoWindow.open(map, marker);
+        });
+        // マップクリック時に情報ウィンドウを閉じる
+        map.addListener("click", () => {
+          infoWindow.close();
+        });
+
+      }
+
+      // マップの初期化を待つ
+      window.initMap = initMap;
+      // マップの初期化が完了したら、マップを表示する
+      window.addEventListener("load", () => {
+        initMap();
+      });
+    </script>
   </body>
 </html>
