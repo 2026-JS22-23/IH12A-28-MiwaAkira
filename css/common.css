@@ -1,0 +1,273 @@
+#map {
+  height: 100%;
+  width: 100%;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  margin: 16px;
+  position: absolute;
+  z-index: 999;
+  color: #000;
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+  width: 100%;
+}
+
+.main {
+  text-align: center;
+  position: relative;
+  z-index: 8;
+}
+
+.location-title {
+  font-size: 50px;
+  font-weight: bold;
+  letter-spacing: 20px !important;
+  margin: 0;
+}
+
+.location-address {
+  font-size: 12px;
+}
+
+.location-phone {
+  font-size: 14px;
+  margin-bottom: 4px;
+}
+
+.distance-label {
+  font-size: 14px;
+  font-weight: bold;
+  color: #bd0505;
+  white-space: nowrap;
+  padding: 4px 8px;
+  background: #fff;
+  border: 1px solid #1a73e8;
+  border-radius: 999px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.subname {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+.location-name {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 900;
+  font-style: italic;
+  letter-spacing: 2px;
+  white-space: nowrap;
+}
+
+.location-name.suzuka {
+  color: #d71920;
+}
+
+.location-name.nabana {
+  color: #0f9d58;
+}
+
+.location-name.ise {
+  color: #5ad0ff;
+}
+
+.line {
+  height: 8px;
+  flex: 1;
+  max-width: 100px;
+}
+
+.line.suzuka {
+  background-color: #d71920;
+}
+
+.line.nabana {
+  background-color: #0f9d58;
+}
+
+.line.ise {
+  background-color: #5ad0ff;
+}
+
+.left-line {
+  clip-path: polygon(
+    0 0,
+    100% 0,
+    90% 100%,
+    0 100%
+  );
+}
+
+.right-line {
+  clip-path: polygon(
+    10% 0,
+    100% 0,
+    100% 100%,
+    0 100%
+  );
+}
+
+.circuit-title h1 {
+  margin: 0;
+  color: #d71920;
+  font-size: 20px;
+  font-weight: 900;
+  font-style: italic;
+  letter-spacing: 2px;
+  white-space: nowrap;
+}
+
+.gm-ui-hover-effect {
+  top: 50% !important;
+  left: -10% !important;
+  transform: scale(0.8);
+}
+
+.kazari {
+  position: absolute;
+  top: -20px;
+  left: -20px;
+  z-index: 999;
+  opacity: 100%;
+  pointer-events: none;
+}
+
+.kazari img {
+  width: 40%;
+  height: auto;
+}
+
+.kazari.nabana {
+  width: 80%;
+}
+
+.kazari.ise {
+  width: 80%;
+  margin-top: 10px;
+  left: -10px;
+}
+
+.gm-style .gm-style-iw-c {
+  border: 4px solid #000;
+  border-radius: 8px;
+  height: auto !important;
+  max-height: none !important;
+}
+
+.gm-style .gm-style-iw-d {
+  max-height: none !important;
+  overflow: visible !important;
+}
+
+.main > img {
+  display: block;
+  width: 80%;
+  height: auto;
+  margin: 0 auto;
+  border-radius: 8px;
+}
+
+.ad-num {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 90%;
+  margin: 15px auto 0;
+  gap: 12px;
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  flex: 1;
+  min-width: 0;
+}
+
+.info-item .icon {
+  font-size: 20px;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.info-item p {
+  font-size: 20px;
+  margin: 0;
+  font-weight: 700;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.ad-num .suzuka {
+  color: #d71920;
+}
+
+.ad-num .nabana {
+  color: #0f9d58;
+}
+
+.ad-num .ise {
+  color: #5ad0ff;
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  width: 90%;
+  margin: 12px auto 0;
+  background-color: #000000;
+  border-radius: 8px;
+  padding: 4px 8px;
+  font-size: 20px;
+}
+
+.location-oneword {
+  margin: 0;
+  flex: 1;
+  font-size: 15px;
+  text-align: left;
+  line-height: 1.4;
+}
+
+.footer a {
+  display: inline-block;
+  font-weight: 700;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.location-detail-link {
+  background-color: #f5f2f2;
+  border-radius: 4px;
+  z-index: 99999;
+}
+
+.footer .suzuka {
+  color: #ffffff;
+}
+
+.footer .nabana {
+  color: #0f9d58;
+}
+
+.footer .ise {
+  color: #5ad0ff;
+}
